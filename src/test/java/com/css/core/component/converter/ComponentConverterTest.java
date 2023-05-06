@@ -22,14 +22,18 @@ public class ComponentConverterTest {
         // given
         final CreateComponentInput mainBoard= new CreateComponentInput(
                 "Asus Prime B450M",
-                ComponentType.MAIN_BOARD,
                 new BigDecimal("560.33"),
-                SocketType.LGA);
+                10,
+                ComponentType.MAIN_BOARD,
+                SocketType.LGA
+        );
 
         final CreateComponentInput ssd= new CreateComponentInput(
                 "Kingston A400 Bulk ",
-                ComponentType.SSD,
-                new BigDecimal("172.99"));
+                new BigDecimal("172.99"),
+                50,
+                ComponentType.SSD
+        );
 
         List<CreateComponentInput> inputList = new ArrayList<>();
         Collections.addAll(inputList, mainBoard, ssd);

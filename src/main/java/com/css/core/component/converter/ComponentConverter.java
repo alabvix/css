@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class ComponentConverter {
 
     public List<Component> toComponentList(List<CreateComponentInput> inputList) {
-        return  inputList.stream().map( i -> new Component(0, i.name, i.type, i.price,i.socket))
+        return  inputList.stream().map( i -> new Component(0, i.name, i.price, i.quantity, i.type, i.socket))
                 .collect(Collectors.toList());
     }
 }

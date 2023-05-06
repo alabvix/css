@@ -9,23 +9,27 @@ public class CreateComponentInput {
 
     public final String name;
 
-    public final ComponentType type;
-
     public final BigDecimal price;
+
+    public final int quantity;
+
+    public final ComponentType type;
 
     public final SocketType socket;
 
-    public CreateComponentInput(String name, ComponentType type, BigDecimal price, SocketType socket) {
+    public CreateComponentInput(String name, BigDecimal price, int quantity, ComponentType type, SocketType socket) {
         this.name = name;
-        this.type = type;
         this.price = price;
+        this.quantity = quantity;
+        this.type = type;
         this.socket = socket;
     }
 
-    public CreateComponentInput(String name, ComponentType type, BigDecimal price) {
+    public CreateComponentInput(String name, BigDecimal price, int quantity, ComponentType type) {
         this.name = name;
-        this.type = type;
         this.price = price;
+        this.quantity = quantity;
+        this.type = type;
         this.socket = SocketType.NOT_APPLICABLE;
     }
 }

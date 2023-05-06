@@ -8,15 +8,18 @@ public class Component {
 
     private String name;
 
-    private ComponentType type;
-
     private BigDecimal price;
+
+    private int quantity;
+
+    private ComponentType type;
 
     private SocketType socket;
 
-    public Component(Integer id, String name, ComponentType type, BigDecimal price, SocketType socket) {
+    public Component(Integer id, String name, BigDecimal price, int quantity, ComponentType type, SocketType socket) {
         this.id = id;
         this.name = name;
+        this.quantity = quantity;
         this.type = type;
         this.price = price;
         this.socket = socket;
