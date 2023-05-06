@@ -1,0 +1,29 @@
+POST http://localhost:8080/component
+content-type: application/json
+
+{
+  "components": 
+    [
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "MAIN_BOARD", "socket":"LGA"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "PROCESSOR", "socket":"LGA"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "GRAPHIC_CARD"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "HDD"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "SSD"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "MEMORY"},
+        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "POWER_SUPPLY"},
+    ]    
+}
+
+{
+  "quote": {
+    "discountPercentage": 5,
+    "component_ids" : [1, 2, 4, 8, 9, 11, 13]
+  }    
+}
+
+{
+  "component": {
+    "id": 5
+  }    
+}
+

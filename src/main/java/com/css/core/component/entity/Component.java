@@ -44,4 +44,8 @@ public class Component {
     public SocketType getSocket() {
         return socket;
     }
+
+    public BigDecimal calculateTotalValue() {
+        return this.price.multiply(new BigDecimal(this.quantity));
+    }
 }
