@@ -1,51 +1,37 @@
 package com.css.core.component.entity;
 
+import com.css.core.component.entity.hardware.Hardware;
+
 import java.math.BigDecimal;
 
 public class Component {
-
     private Integer id;
+    public final String name;
+    public final ComponentTypeEnum type;
+    public final BigDecimal price;
+    public final ManufacturerEnum manufacturer;
+    public final int quantity;
+    public final Hardware hardware;
 
-    private String name;
-
-    private BigDecimal price;
-
-    private int quantity;
-
-    private ComponentType type;
-
-    private SocketType socket;
-
-    public Component(Integer id, String name, BigDecimal price, int quantity, ComponentType type, SocketType socket) {
-        this.id = id;
+    public Component(String name,
+                     ComponentTypeEnum type,
+                     BigDecimal price,
+                     ManufacturerEnum manufacturer,
+                     int quantity,
+                     Hardware hardware) {
         this.name = name;
+        this.price = price;
+        this.manufacturer = manufacturer;
         this.quantity = quantity;
         this.type = type;
-        this.price = price;
-        this.socket = socket;
+        this.hardware = hardware;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public ComponentType getType() {
-        return type;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public SocketType getSocket() {
-        return socket;
-    }
-
-    public BigDecimal calculateTotalValue() {
-        return this.price.multiply(new BigDecimal(this.quantity));
     }
 }

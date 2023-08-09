@@ -3,23 +3,97 @@ content-type: application/json
 
 {
   "components": 
+  [
+    { 
+      "name":"Asus PRIME Z690-A", 
+      "manufacturer" : "ASUS",
+      "type" : "MAIN_BOARD",
+      "price": 1549.99, 
+      "quantity":"",
+      "mainBoard" : {
+        "socket":"",
+        "memorySlots":"",
+        "ecc":"",
+        "raid":"",
+        "energyConsumption":
+      }
+    },
+    { 
+      "name":"AMD Ryzen 5 5600G", 
+      "manufacturer" : "AMD",
+      "type" : "PROCESSOR",
+      "price": 1549.99, 
+      "quantity":"",
+      "processor" : {
+        "socket":"",
+        "clock":"",
+        "cores":"",
+        "threads":""      
+      }
+    }
+  ]    
+}
+
+
+
+{
+  "components": 
     [
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "MAIN_BOARD", "socket":"LGA"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "PROCESSOR", "socket":"LGA"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "GRAPHIC_CARD"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "HDD"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "SSD"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "MEMORY"},
-        {"name":"PRIME Z690-A", "price": 0.00, "quantity": 20, "type": "POWER_SUPPLY"},
+        {"name":"Asus PRIME Z690-A", "price": 1549.99, "quantity": 20, "type": "MAIN_BOARD", "socket":"LGA"},
+        {"name":"AMD Ryzen 5 4600G 3.7GHz", "price": 0.00, "quantity": 20, "type": "PROCESSOR", "socket":"LGA"},
+        {"name":"NVIDIA Geforce RTX 3060 12 GB GDDR6", "price": 2259.99, "quantity": 20, "type": "GRAPHIC_CARD"},
+        {"name":"Seagate Barracuda 1TB Sata", "price": 399.45, "quantity": 20, "type": "HDD"},
+        {"name":"Kingston A400 240 GB SATA", "price": 119.99, "quantity": 20, "type": "SSD"},
+        {"name":"Kingston A400 240 GB SATA", "price": 119.99, "quantity": 2, "type": "SSD"},
+        {"name":"Kingston Fury Beast 32 GB", "price": 0.00, "quantity": 20, "type": "MEMORY"},
+        {"name":"XPG Core Reactor 850W", "price": 619.99, "quantity": 20, "type": "POWER_SUPPLY"},
     ]    
 }
 
 {
+  "components": 
+    [
+        {"name":"Asus PRIME Z690-A", "status": "CREATED", "id": 1, "message" : ""},
+        {"name":"AMD Ryzen 5 4600G 3.7GHz", "status": "FAIL", "id": 0, "message" : "Price can not be 0.00"},
+        {"name":"NVIDIA Geforce RTX 3060 12 GB GDDR6", "status": "CREATED", "id": 2, "message" : ""},
+        {"name":"Seagate Barracuda 1TB Sata", "status": "CREATED", "id": 20, "message": "HDD"},
+        {"name":"Kingston A400 240 GB SATA", "status": "FAIL", "id": 0, "message": "Name duplicated"},
+        {"name":"Kingston Fury Beast 32 GB", "status": "FAIL", "id": 0, "message": "Price can not be 0.00"},
+        {"name":"XPG Core Reactor 850W", "status": "CREATED", "id": 3, "message": ""},
+    ]    
+}
+
+
+{
   "quote": {
     "discountPercentage": 5,
-    "component_ids" : [1, 2, 4, 8, 9, 11, 13]
+    "componentIds" : [1, 2, 4, 8, 9, 11, 13]
   }    
 }
+
+{
+  "quote": {
+    "price": 1500.00,
+    "priceWithDiscount" : 1490.00
+  }    
+}
+
+{
+  "quote": {
+    "errorMsg": "Component not found"
+  }    
+}
+
+{
+  "quote": {
+    "errorMsg": "Component not found"
+  }    
+}
+
+{
+  "message": "Component with id {id} not found" 
+}
+
 
 {
   "component": {
@@ -27,3 +101,43 @@ content-type: application/json
   }    
 }
 
+{
+  "component": {
+    "errorMsg": "Component not found"
+  }    
+}
+
+{
+  "component": {
+    "id": 5,
+    "totalValue" : 2300.00
+  }    
+}
+
+
+{
+  "sell": {
+    "clientEmail" : "jonh.noble@gmail.com",
+    "PAYMENT"
+    "totalPrice" : 1020.34,
+    "finalPrice" : 973.123,
+    "discountPercentage": 5,
+    "componentIds" : [1, 2, 4, 8, 9, 11, 13]
+  }    
+}
+
+{
+  "sellsByClient": {
+    "clientEmail" : "jonh.noble@gmail.com",
+    "starDate" : "2023-01-23T00:00:00.000Z",
+    "endDate" : "2023-01-25T00:00:00.000Z"
+  }    
+}
+
+{
+  "sellsByComponent": {
+    "componentId" : 2,
+    "starDate" : "2023-01-23T00:00:00.000Z",
+    "endDate" : "2023-01-25T00:00:00.000Z"
+  }
+}

@@ -1,6 +1,6 @@
 package com.css.core.component.entity;
 
-public enum ComponentType {
+public enum ComponentTypeEnum {
     MAIN_BOARD,
     PROCESSOR,
     GRAPHIC_CARD,
