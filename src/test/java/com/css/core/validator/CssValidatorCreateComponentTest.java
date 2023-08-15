@@ -28,8 +28,8 @@ public class CssValidatorCreateComponentTest {
                 0);
         final CreateComponentInput input = new CreateComponentInput(
                 "AMD Ryzen 5 5600G",
-                ComponentTypeEnum.PROCESSOR,
                 ManufacturerEnum.AMD,
+                ComponentTypeEnum.PROCESSOR,
                 new BigDecimal("849.00"),
                 40,
                 processor,

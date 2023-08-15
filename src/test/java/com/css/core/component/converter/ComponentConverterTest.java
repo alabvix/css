@@ -48,8 +48,8 @@ public class ComponentConverterTest {
         );
         final CreateComponentInput componentInput = new CreateComponentInput(
                 "Asus Prime B450M",
-                ComponentTypeEnum.MAIN_BOARD,
                 ManufacturerEnum.ASUS,
+                ComponentTypeEnum.MAIN_BOARD,
                 new BigDecimal("560.33"),
                 10,
                 null,
@@ -79,8 +79,8 @@ public class ComponentConverterTest {
         );
         final CreateComponentInput componentInput = new CreateComponentInput(
                 "AMD Ryzen 5 4600G",
-                ComponentTypeEnum.PROCESSOR,
                 ManufacturerEnum.AMD,
+                ComponentTypeEnum.PROCESSOR,
                 new BigDecimal("740.04"),
                 10,
                 hardwareInput,
@@ -105,8 +105,8 @@ public class ComponentConverterTest {
         );
         final CreateComponentInput componentProcessor = new CreateComponentInput(
                 "Gamemax GP750",
-                ComponentTypeEnum.POWER_SUPPLY,
                 ManufacturerEnum.GameMax,
+                ComponentTypeEnum.POWER_SUPPLY,
                 new BigDecimal("373.00"),
                 15,
                 null,
