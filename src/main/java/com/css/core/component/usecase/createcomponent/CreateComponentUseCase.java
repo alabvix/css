@@ -3,7 +3,9 @@ package com.css.core.component.usecase.createcomponent;
 import com.css.core.component.converter.ComponentConverter;
 import com.css.core.component.gateway.ComponentGateway;
 import com.css.core.component.usecase.createcomponent.input.CreateComponentInput;
-import com.css.core.component.validator.CreateComponentValidator;
+import com.css.core.component.usecase.createcomponent.output.CreateComponentOutput;
+import com.css.core.component.usecase.createcomponent.output.OutputStatusEnum;
+import com.css.core.validator.CssValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +17,11 @@ public class CreateComponentUseCase {
 
     private final ComponentConverter converter;
 
-    private final CreateComponentValidator validator;
+    private final CssValidator<CreateComponentInput> validator;
 
     public CreateComponentUseCase(ComponentGateway gateway,
                                   ComponentConverter converter,
-                                  CreateComponentValidator validator) {
+                                  CssValidator<CreateComponentInput> validator) {
         this.gateway = gateway;
         this.converter = converter;
         this.validator = validator;
@@ -34,7 +36,7 @@ public class CreateComponentUseCase {
             final List<String> violations = validator.validate(input);
 
             if (violations.size() > 0) {
-                setViolations(violations, input, output);
+                setViolationsOutput(violations, input.name(), output);
                 continue;
             }
 
@@ -47,11 +49,10 @@ public class CreateComponentUseCase {
         return outputList;
     }
 
-    private void setViolations(List<String> violations, CreateComponentInput input, CreateComponentOutput output){
-        if (violations.size() == 0) {
-            return;
-        }
-        output.setName(input.name());
+    private void setViolationsOutput(List<String> violations,
+                                     String componentName,
+                                     CreateComponentOutput output){
+        output.setName(componentName);
         output.setStatus(OutputStatusEnum.FAIL);
         output.setMessage(violations.stream()
                 .map(String::valueOf)

@@ -1,6 +1,5 @@
-package com.css.core.component.validator;
+package com.css.core.validator;
 
-import com.css.core.component.usecase.createcomponent.input.CreateComponentInput;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -10,8 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class CreateComponentValidator {
-    public List<String> validate(CreateComponentInput componentInput) {
+public class CssValidator<T> {
+
+    public List<String> validate(T t) {
+
         final List<String> validationMessages = new ArrayList<>();
 
         Validator validator;
@@ -19,11 +20,12 @@ public class CreateComponentValidator {
             validator = factory.getValidator();
         }
 
-        Set<ConstraintViolation<CreateComponentInput>> violations = validator.validate(componentInput);
-        for (ConstraintViolation<CreateComponentInput> violation : violations) {
+        Set<ConstraintViolation<T>> violations = validator.validate(t);
+        for (ConstraintViolation<T> violation : violations) {
             validationMessages.add(violation.getMessage());
         }
 
         return validationMessages;
     }
+
 }

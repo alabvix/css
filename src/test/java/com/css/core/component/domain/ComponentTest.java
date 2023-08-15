@@ -1,9 +1,4 @@
-package com.css.core.component.entity;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
-import java.math.BigDecimal;
+package com.css.core.component.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,6 +1,6 @@
-package com.css.core.component.entity;
+package com.css.core.component.domain;
 
-import com.css.core.component.entity.hardware.Hardware;
+import com.css.core.component.domain.hardware.Hardware;
 
 import java.math.BigDecimal;
 

@@ -1,7 +1,7 @@
-package com.css.core.component.validator;
+package com.css.core.validator;
 
-import com.css.core.component.entity.ComponentTypeEnum;
-import com.css.core.component.entity.ManufacturerEnum;
+import com.css.core.component.domain.ComponentTypeEnum;
+import com.css.core.component.domain.ManufacturerEnum;
 import com.css.core.component.usecase.createcomponent.input.CreateComponentInput;
 import com.css.core.component.usecase.createcomponent.input.ProcessorInput;
 import org.junit.jupiter.api.DisplayName;
@@ -13,9 +13,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CreateComponentValidatorTest {
+public class CssValidatorCreateComponentTest {
 
-    private final CreateComponentValidator validator = new CreateComponentValidator();
+    private final CssValidator<CreateComponentInput> validator = new CssValidator<>();
 
     @Test
     @DisplayName("Validate: given invalid processor must return validation messages")

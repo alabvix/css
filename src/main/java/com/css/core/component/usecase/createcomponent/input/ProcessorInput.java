@@ -1,6 +1,6 @@
 package com.css.core.component.usecase.createcomponent.input;
 
-import com.css.core.component.entity.hardware.SocketTypeEnum;
+import com.css.core.component.domain.hardware.SocketTypeEnum;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Range;
 

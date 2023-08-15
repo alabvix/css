@@ -1,4 +1,4 @@
-package com.css.core.component.entity.hardware;
+package com.css.core.component.domain.hardware;
 
 public record Processor(
         SocketTypeEnum socket,

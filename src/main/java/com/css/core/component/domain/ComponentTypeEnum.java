@@ -1,4 +1,4 @@
-package com.css.core.component.entity;
+package com.css.core.component.domain;
 
 public enum ComponentTypeEnum {
     MAIN_BOARD,

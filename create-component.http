@@ -1,0 +1,35 @@
+POST http://localhost:8080/components
+content-type: application/json
+
+{
+  "components": 
+  [
+    { 
+      "name":"Asus PRIME Z690-A", 
+      "manufacturer" : "ASUS",
+      "type" : "MAIN_BOARD",
+      "price": 1549.99, 
+      "quantity":"",
+      "mainBoard" : {
+        "socket":"",
+        "memorySlots":"",
+        "ecc":"",
+        "raid":"",
+        "energyConsumption":0
+      }
+    },
+    { 
+      "name":"AMD Ryzen 5 5600G", 
+      "manufacturer" : "AMD",
+      "type" : "PROCESSOR",
+      "price": 1549.99, 
+      "quantity":"",
+      "processor" : {
+        "socket":"",
+        "clock":"",
+        "cores":"",
+        "threads":""      
+      }
+    }
+  ]    
+}

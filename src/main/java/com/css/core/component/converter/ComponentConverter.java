@@ -1,7 +1,7 @@
 package com.css.core.component.converter;
 
-import com.css.core.component.entity.Component;
-import com.css.core.component.entity.hardware.*;
+import com.css.core.component.domain.Component;
+import com.css.core.component.domain.hardware.*;
 import com.css.core.component.usecase.createcomponent.input.CreateComponentInput;
 
 public class ComponentConverter {

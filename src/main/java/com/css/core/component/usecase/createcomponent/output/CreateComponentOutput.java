@@ -1,4 +1,4 @@
-package com.css.core.component.usecase.createcomponent;
+package com.css.core.component.usecase.createcomponent.output;
 
 public class CreateComponentOutput {
     private String name;
