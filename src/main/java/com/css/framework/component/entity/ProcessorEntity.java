@@ -7,16 +7,37 @@ import jakarta.persistence.*;
 @Table(name="processor")
 public class ProcessorEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Enumerated(EnumType.STRING)
     private SocketTypeEnum socket;
+
     private Double clock;
+
     private Integer threads;
+
     private Integer cores;
+
     private Integer energyConsumption;
 
-    @OneToOne(mappedBy = "processor")
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "component_id")
     private ComponentEntity component;
+
+    public ProcessorEntity(SocketTypeEnum socket,
+                           Double clock,
+                           Integer threads,
+                           Integer cores,
+                           Integer energyConsumption,
+                           ComponentEntity component) {
+        this.socket = socket;
+        this.clock = clock;
+        this.threads = threads;
+        this.cores = cores;
+        this.energyConsumption = energyConsumption;
+        this.component = component;
+    }
 
     public ComponentEntity getComponent() {
         return component;

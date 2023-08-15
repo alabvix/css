@@ -7,15 +7,37 @@ import jakarta.persistence.*;
 @Table(name="main_board")
 public class MainBoardEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Enumerated(EnumType.STRING)
     private SocketTypeEnum socket;
+
     private boolean ecc;
+
     private boolean raid;
+
     private Integer memorySlots;
+
     private Integer energyConsumption;
-    @OneToOne(mappedBy = "mainBoard")
+
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "component_id")
     private ComponentEntity component;
+
+    public MainBoardEntity(SocketTypeEnum socket,
+                           boolean ecc,
+                           boolean raid,
+                           Integer memorySlots,
+                           Integer energyConsumption,
+                           ComponentEntity component) {
+        this.socket = socket;
+        this.ecc = ecc;
+        this.raid = raid;
+        this.memorySlots = memorySlots;
+        this.energyConsumption = energyConsumption;
+        this.component = component;
+    }
 
     public ComponentEntity getComponent() {
         return component;

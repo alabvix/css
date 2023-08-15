@@ -36,7 +36,7 @@ public class CreateComponentUseCase {
             final List<String> violations = validator.validate(input);
 
             if (violations.size() > 0) {
-                setViolationsOutput(violations, input.name(), output);
+                setViolationsOutput(violations, input.name(), output, outputList);
                 continue;
             }
 
@@ -51,12 +51,14 @@ public class CreateComponentUseCase {
 
     private void setViolationsOutput(List<String> violations,
                                      String componentName,
-                                     CreateComponentOutput output){
+                                     CreateComponentOutput output,
+                                     List<CreateComponentOutput> outputList){
         output.setName(componentName);
         output.setStatus(OutputStatusEnum.FAIL);
         output.setMessage(violations.stream()
                 .map(String::valueOf)
                 .collect(Collectors.joining(", "))
         );
+        outputList.add(output);
     }
 }

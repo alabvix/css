@@ -5,17 +5,33 @@ import jakarta.persistence.*;
 @Entity
 @Table(name="power_supply")
 public class PowerSupplyEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private boolean fanLess;
+
     private Integer efficiency;
+
     private String output;
+
     private Integer power;
 
-    @OneToOne(mappedBy = "powerSupply")
+    @OneToOne
+    @PrimaryKeyJoinColumn
     private ComponentEntity component;
+
+    public PowerSupplyEntity(boolean fanLess,
+                             Integer efficiency,
+                             String output,
+                             Integer power,
+                             ComponentEntity component) {
+        this.fanLess = fanLess;
+        this.efficiency = efficiency;
+        this.output = output;
+        this.power = power;
+        this.component = component;
+    }
 
     public ComponentEntity getComponent() {
         return component;

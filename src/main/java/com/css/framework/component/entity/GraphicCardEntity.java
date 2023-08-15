@@ -1,5 +1,6 @@
 package com.css.framework.component.entity;
 
+import com.css.core.component.domain.hardware.Hardware;
 import jakarta.persistence.*;
 
 @Entity
@@ -7,15 +8,32 @@ import jakarta.persistence.*;
 public class GraphicCardEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private Integer totalMemory;
+
     private boolean multiGpu;
+
     private boolean rayTracing;
+
     private Integer energyConsumption;
 
-    @OneToOne(mappedBy = "graphicCard")
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "component_id")
     private ComponentEntity component;
+
+    public GraphicCardEntity(Integer totalMemory,
+                             boolean multiGpu,
+                             boolean rayTracing,
+                             Integer energyConsumption,
+                             ComponentEntity component) {
+        this.totalMemory = totalMemory;
+        this.multiGpu = multiGpu;
+        this.rayTracing = rayTracing;
+        this.energyConsumption = energyConsumption;
+        this.component = component;
+    }
 
     public ComponentEntity getComponent() {
         return component;

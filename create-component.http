@@ -5,17 +5,31 @@ content-type: application/json
   "components": 
   [
     { 
-      "name":"Asus PRIME Z690-A", 
+      "name":"B550M Aorus Elite Micro ATX AM4", 
+      "manufacturer" : "GIGABYTE",
+      "type" : "MAIN_BOARD",
+      "price": 899.99, 
+      "quantity": 10,
+      "mainBoard" : {
+        "socket":"LGA",
+        "memorySlots": 4,
+        "ecc": true,
+        "raid": true,
+        "energyConsumption": 30
+      }
+    },
+    { 
+      "name":"Asus ROG MAXIMUS Z690 EXTREME", 
       "manufacturer" : "ASUS",
       "type" : "MAIN_BOARD",
-      "price": 1549.99, 
-      "quantity":"",
+      "price": 16949.59, 
+      "quantity": 10,
       "mainBoard" : {
-        "socket":"",
-        "memorySlots":"",
-        "ecc":"",
-        "raid":"",
-        "energyConsumption":0
+        "socket":"LGA",
+        "memorySlots": 4,
+        "ecc": false,
+        "raid": true,
+        "energyConsumption": 50
       }
     },
     { 
@@ -23,12 +37,26 @@ content-type: application/json
       "manufacturer" : "AMD",
       "type" : "PROCESSOR",
       "price": 1549.99, 
-      "quantity":"",
+      "quantity":10,
       "processor" : {
-        "socket":"",
-        "clock":"",
-        "cores":"",
-        "threads":""      
+        "socket":"LGA",
+        "clock":3,
+        "cores":4,
+        "threads":4,
+        "energyConsumption": 20      
+      }
+    },
+    { 
+      "name":"GALAX GeForce RTX 2060 6 GB OC", 
+      "manufacturer" : "GALAX",
+      "type" : "GRAPHIC_CARD",
+      "price": 3299.00, 
+      "quantity": 10,
+      "graphicCard" : {
+        "totalMemory": 6,
+        "multiGpu": false,
+        "rayTracing": false,
+        "energyConsumption": 20      
       }
     }
   ]    

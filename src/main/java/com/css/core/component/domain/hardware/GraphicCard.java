@@ -4,5 +4,4 @@ public record GraphicCard  (
         Integer totalMemory,
         boolean multiGpu,
         boolean rayTracing,
-        Integer energyConsumption) implements Hardware
-{}
+        Integer energyConsumption) implements Hardware{}

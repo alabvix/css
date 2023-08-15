@@ -1,6 +1,5 @@
 package com.css.framework.component.entity;
 
-
 import com.css.core.component.domain.ComponentTypeEnum;
 import com.css.core.component.domain.ManufacturerEnum;
 import jakarta.persistence.*;
@@ -13,24 +12,29 @@ public class ComponentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
+    @Enumerated(EnumType.STRING)
     private ComponentTypeEnum type;
+
     private BigDecimal price;
+
+    private Integer quantity;
+
+    @Enumerated(EnumType.STRING)
     private ManufacturerEnum manufacturer;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "mainboard_id")
+
+    @OneToOne(mappedBy = "component", cascade = CascadeType.ALL)
     private MainBoardEntity mainBoard;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "processor_id")
+    @OneToOne(mappedBy = "component", cascade = CascadeType.ALL)
     private ProcessorEntity processor;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "power_supply_id")
+    @OneToOne(mappedBy = "component", cascade = CascadeType.ALL)
     private PowerSupplyEntity powerSupply;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "graphic_card_id")
+    @OneToOne(mappedBy = "component", cascade = CascadeType.ALL)
     private GraphicCardEntity graphicCard;
 
     public MainBoardEntity getMainBoard() {
@@ -103,5 +107,13 @@ public class ComponentEntity {
 
     public void setManufacturer(ManufacturerEnum manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }
