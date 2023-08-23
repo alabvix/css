@@ -6,18 +6,24 @@ import java.math.BigDecimal;
 
 public class Component {
     private Integer id;
+
     public final String name;
+
     public final ComponentTypeEnum type;
+
     public final BigDecimal price;
+
     public final ManufacturerEnum manufacturer;
-    public final int quantity;
+
+    public final Integer quantity;
+
     public final Hardware hardware;
 
     public Component(String name,
                      ComponentTypeEnum type,
                      BigDecimal price,
                      ManufacturerEnum manufacturer,
-                     int quantity,
+                     Integer quantity,
                      Hardware hardware) {
         this.name = name;
         this.price = price;

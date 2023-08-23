@@ -13,12 +13,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CssValidatorCreateComponentTest {
+public class GenericValidatorCreateComponentInputTest {
 
-    private final CssValidator<CreateComponentInput> validator = new CssValidator<>();
+    private final GenericValidator<CreateComponentInput> validator = new GenericValidator<>();
 
     @Test
-    @DisplayName("Validate: given invalid processor must return validation messages")
+    @DisplayName("Validate: given a processor with invalid processor must return validation messages")
     void validate_invalidProcessor_mustReturnValidationMessages(){
         final ProcessorInput processor = new ProcessorInput(
                 null,

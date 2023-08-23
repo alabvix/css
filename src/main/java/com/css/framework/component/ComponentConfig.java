@@ -2,7 +2,7 @@ package com.css.framework.component;
 
 import com.css.core.component.converter.ComponentConverter;
 import com.css.core.component.usecase.createcomponent.CreateComponentUseCase;
-import com.css.core.validator.CssValidator;
+import com.css.core.validator.GenericValidator;
 import com.css.framework.component.repository.ComponentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ public class ComponentConfig {
         return new CreateComponentUseCase(
                 componentRepository,
                 new ComponentConverter(),
-                new CssValidator<>()
+                new GenericValidator<>()
         );
     }
 }

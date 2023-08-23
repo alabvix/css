@@ -5,7 +5,7 @@ import com.css.core.component.gateway.ComponentGateway;
 import com.css.core.component.usecase.createcomponent.input.CreateComponentInput;
 import com.css.core.component.usecase.createcomponent.output.CreateComponentOutput;
 import com.css.core.component.usecase.createcomponent.output.OutputStatusEnum;
-import com.css.core.validator.CssValidator;
+import com.css.core.validator.GenericValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +17,11 @@ public class CreateComponentUseCase {
 
     private final ComponentConverter converter;
 
-    private final CssValidator<CreateComponentInput> validator;
+    private final GenericValidator<CreateComponentInput> validator;
 
     public CreateComponentUseCase(ComponentGateway gateway,
                                   ComponentConverter converter,
-                                  CssValidator<CreateComponentInput> validator) {
+                                  GenericValidator<CreateComponentInput> validator) {
         this.gateway = gateway;
         this.converter = converter;
         this.validator = validator;
@@ -40,8 +40,7 @@ public class CreateComponentUseCase {
                 continue;
             }
 
-            final Integer id = gateway.create(converter.toComponent(input));
-            output.setId(id);
+            output.setId(gateway.create(converter.toComponent(input)));
             output.setStatus(OutputStatusEnum.CREATED);
             outputList.add(output);
         }

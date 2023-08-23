@@ -1,0 +1,36 @@
+POST http://localhost:8080/components
+content-type: application/json
+
+{
+  "components": 
+  [
+    { 
+      "name":"B550M Aorus Elite Micro ATX AM4", 
+      "manufacturer" : "GIGABYTE",
+      "type" : "MAIN_BOARD",
+      "price": 899.99, 
+      "quantity": 10,
+      "processor" : {
+        "socket":"LGA",
+        "clock":3,
+        "cores":4,
+        "threads":4,
+        "energyConsumption": 20      
+      }
+    },
+    { 
+      "name":"GALAX GeForce RTX 2060 6 GB OC", 
+      "manufacturer" : "GALAX",
+      "type" : "GRAPHIC_CARD",
+      "price": 3299.00, 
+      "quantity": 10,
+      "mainBoard" : {
+        "socket":"LGA",
+        "memorySlots": 4,
+        "ecc": false,
+        "raid": true,
+        "energyConsumption": 50
+      }
+    }
+  ]    
+}

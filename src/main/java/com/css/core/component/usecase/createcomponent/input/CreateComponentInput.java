@@ -2,6 +2,7 @@ package com.css.core.component.usecase.createcomponent.input;
 
 import com.css.core.component.domain.ComponentTypeEnum;
 import com.css.core.component.domain.ManufacturerEnum;
+import com.css.core.component.validation.ComponentValidatorConstraint;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import org.hibernate.validator.constraints.Range;
 
 import java.math.BigDecimal;
 
+@ComponentValidatorConstraint
 public record CreateComponentInput(
         @NotNull(message = "Invalid name.")
         @NotEmpty(message = "Invalid name.")

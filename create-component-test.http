@@ -1,0 +1,24 @@
+POST http://localhost:8080/components
+content-type: application/json
+
+{
+  "components": 
+  [
+    { 
+      "name":"B550M Aorus Elite Micro ATX AM4", 
+      "manufacturer" : "GIGABYTE",
+      "type" : "MAIN_BOARD",
+      "price": 899.99, 
+      "quantity": 10,
+      "hardware": {
+        "mainBoard" : {
+          "socket":"LGA",
+          "memorySlots": 4,
+          "ecc": true,
+          "raid": true,
+          "energyConsumption": 30
+        }       
+      }
+    }
+  ]    
+}

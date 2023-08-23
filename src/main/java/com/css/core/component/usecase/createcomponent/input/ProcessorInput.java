@@ -13,7 +13,7 @@ public record ProcessorInput(
         @NotNull(message = "Number of threads must be informed.")
         @Range(min = 1, message = "Invalid threads. Must be 1 or greater.")
         Integer threads,
-        @NotNull
+        @NotNull(message = "Number of cores must be informed.")
         @Range(min = 1, message = "Invalid cores. Must be 1 or greater.")
         Integer cores,
         @NotNull(message = "Energy consumption must be informed.")
