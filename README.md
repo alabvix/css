@@ -6,8 +6,12 @@
 - Spring Boot >= 3.1.2
 
 ## Running Locally
-mvn clean install
-mvn spring-boot:run
+> mvn clean install
+>
+> mvn spring-boot:run
+
+Or configure your IDE. 
+
 
 ## Creating new components
 Example using Visual Studio Code Rest Client plugin:
