@@ -41,6 +41,10 @@ public class Component {
         return id;
     }
 
+    public BigDecimal calcTotalValue() {
+        return this.price.multiply(new BigDecimal(this.quantity));
+    }
+
     public MainBoard getMainBoard(){
         if (this.hardware instanceof MainBoard){
             return (MainBoard) hardware;

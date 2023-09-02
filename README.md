@@ -9,7 +9,7 @@
 mvn clean install
 mvn spring-boot:run
 
-## Creating components
+## Creating new components
 Example using Visual Studio Code Rest Client plugin:
 ```json
 POST http://localhost:8080/components
@@ -49,3 +49,15 @@ content-type: application/json
   ]    
 }
 ```
+## Expanding the system to support a new Hardware type
+1. Create the new class to represent the Hardware and implement on it the Hardware interface.
+2. Add a test for the new hardware on the ComponentTest.
+3. Add the new type on the ComponentTypeEnum. 
+4. Update the Component class adding the get method for the new Hardware.
+5. Update the ComponentValidator.
+6. Update the ComponentConverter.
+7. At framework package, create the Entity for the new Component table.
+8. At framework package, update the ComponentEntityConverter.
+
+## Current system Component/Hardware model
+![System model](oop-model.png "Current system model")
