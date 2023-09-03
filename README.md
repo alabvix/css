@@ -1,5 +1,7 @@
 # CSS - Computer Self-Service
 
+CSS is an API for an online computer store that allows the user to build their own computer by choosing different hardware components, such as motherboards, processors, and so on. The system should be able to prevent hardware incompatibility due to customers' poor choices, for example, selecting an incompatible processor for a given motherboard.
+
 ## Pre-requirements
 - Java >= 17
 - Maven >= 3.8.1
@@ -63,5 +65,5 @@ content-type: application/json
 7. At framework package, create the Entity for the new Component table.
 8. At framework package, update the ComponentEntityConverter.
 
-## Current system Component/Hardware model
+## Current domain model
 ![System model](oop-model.png "Current system model")
