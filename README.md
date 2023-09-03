@@ -63,13 +63,20 @@ Access the in memory H2 database to view the tables and data (Check it out the H
 
 ## Expanding the system to support a new Hardware type
 1. Create the new class to represent the Hardware and implement on it the Hardware interface.
-2. Add a test for the new hardware on the ComponentTest.
-3. Add the new type on the ComponentTypeEnum. 
-4. Update the Component class adding the get method for the new Hardware.
-5. Update the ComponentValidator.
-6. Update the ComponentConverter.
-7. At framework package, create the Entity for the new Component table.
-8. At framework package, update the ComponentEntityConverter.
+2. Add a test for the new hardware on the ComponentTest and update the validator test. 
+3. Add the new type on the ComponentTypeEnum.
+4. Create the new Input for the CreateComponent use case with validation rules.
+5. Update the Component class adding the get method for the new Hardware.
+6. Update the CreateComponentInput adding the new Hardware input.
+7. Update the ComponentValidator.
+8. Update the ComponentConverter.
+9. At framework package, create the Entity for the new Hardware table.
+10. At framework package, update the ComponentEntityConverter.
 
 ## Current domain model
 ![System model](oop-model.png "Current system model")
+
+## Improvement points
+* System expandability
+* Test coverage
+* Another design approach?
