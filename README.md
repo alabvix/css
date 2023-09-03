@@ -58,6 +58,9 @@ content-type: application/json
   ]    
 }
 ```
+## H2 Database
+Access the in memory H2 database to view the tables and data (Check it out the H2 URL at application startup: /h2-console)
+
 ## Expanding the system to support a new Hardware type
 1. Create the new class to represent the Hardware and implement on it the Hardware interface.
 2. Add a test for the new hardware on the ComponentTest.
