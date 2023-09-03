@@ -2,6 +2,9 @@
 
 CSS is an API for an online computer store that allows the user to build their own computer by choosing different hardware components, such as motherboards, processors, and so on. The system should be able to prevent hardware incompatibility due to customers' poor choices, for example, selecting an incompatible processor for a given motherboard.
 
+
+> **<span style="color:red">This is a work in progress, and under no circumstances should it be used in production.</color>**
+
 ## Pre-requirements
 - Java >= 17
 - Maven >= 3.8.1
