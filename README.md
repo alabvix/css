@@ -61,7 +61,7 @@ content-type: application/json
 ## H2 Database
 Access the in memory H2 database to view the tables and data (Check it out the H2 URL at application startup: /h2-console)
 
-## Expanding the system to support a new Hardware type
+## Adding a new Hardware type
 1. Create the new class to represent the Hardware and implement on it the Hardware interface.
 2. Add a test for the new hardware on the ComponentTest and update the validator test. 
 3. Add the new type on the ComponentTypeEnum.
@@ -77,6 +77,6 @@ Access the in memory H2 database to view the tables and data (Check it out the H
 ![System model](oop-model.png "Current system model")
 
 ## Improvement points
-* System expandability
+* System Extensibility
 * Test coverage
 * Another design approach?
