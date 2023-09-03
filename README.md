@@ -58,6 +58,23 @@ content-type: application/json
   ]    
 }
 ```
+
+The output for create component is like this:
+```json
+{
+  "components": 
+    [
+        {"name":"Asus PRIME Z690-A", "status": "CREATED", "id": 1, "message" : ""},
+        {"name":"AMD Ryzen 5 4600G 3.7GHz", "status": "FAIL", "id": 0, "message" : "Price can not be 0.00"},
+        {"name":"NVIDIA Geforce RTX 3060 12 GB GDDR6", "status": "CREATED", "id": 2, "message" : ""},
+        {"name":"Seagate Barracuda 1TB Sata", "status": "CREATED", "id": 20, "message": "HDD"},
+        {"name":"Kingston A400 240 GB SATA", "status": "FAIL", "id": 0, "message": "Name duplicated"},
+        {"name":"Kingston Fury Beast 32 GB", "status": "FAIL", "id": 0, "message": "Price can not be 0.00"},
+        {"name":"XPG Core Reactor 850W", "status": "CREATED", "id": 3, "message": ""},
+    ]    
+}
+```
+
 ## H2 Database
 Access the in memory H2 database to view the tables and data (Check it out the H2 URL at application startup: /h2-console)
 
