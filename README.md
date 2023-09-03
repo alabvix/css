@@ -15,6 +15,7 @@ CSS is an API for an online computer store that allows the user to build their o
 >
 > mvn spring-boot:run
 
+Some tests may fail, if so, use: -DskipTests=true
 Or configure your IDE. 
 
 
