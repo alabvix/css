@@ -59,7 +59,7 @@ content-type: application/json
 }
 ```
 
-The output for create component is like this:
+The resource response for create component is like this:
 ```json
 {
   "components": 
